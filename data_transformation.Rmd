@@ -20,3 +20,8 @@ transform_data <- function(data) {
 }
 ```
 
+```{r}
+# Run function on built-in R data set 'mtcars'
+transform_data(mtcars)
+```
+
