@@ -6,4 +6,17 @@ output: html_document
 
 ## Introduction
 
-A function that performs an input transformation.
+This R Markdown file defines the function `transform_data`. 
+
+It assumes a data set is provided as an input. It transforms the data by multiplying all numerical values by 10 and returning the transformed data..
+
+
+```{r}
+# Define function
+transform_data <- function(data) {
+  # Multiply all columns by 10 if they are numeric
+  data[] <- lapply(data, function(col) if(is.numeric(col)) col * 10 else col)
+  return(data)
+}
+```
+
